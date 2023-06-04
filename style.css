@@ -1,343 +1,345 @@
 body{
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  min-height: 10vh;
-  background: black;
-   }
-
-img {
-  max-width: 100%; }
-
-*, *:after, *:before {
-  box-sizing: border-box; }
-
-.tarjeta{
-    position: relative;
-    width: 300px;
-    height: 350px;
-    margin: 20px;
-  }
-
-.tarjeta .face{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  border-radius: 10px;
-  overflow: hidden;
-  transition: .5s;
-}
-
-.tarjeta .froont{
-  transform: perspective(600px)rotateY(0deg);
-  box-shadow: 0 5px 10px #0000;
-}
-
-.tarjeta .froont img{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.tarjeta .froont h2{
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 45px;
-  line-height:45px;
-  color: white;
-  background: rgba(0, 0, 0,.4);
-  text-align: center;
-}
-
-.tarjeta .atras{
-  transform: perspective(600px)rotateY(180deg);
-  background: rgba(3, 35, 54);
-  padding: 15px;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  text-align: center;
-  box-shadow: 0,5px, 10px #0000;
-}
-
-.tarjeta .atras .enlace{
-  border-radius: solid 1px #f3f3f3;
-  height: 50px;
-  line-height: 50px;
-}
-
-.tarjeta .atras .enlace a{
-  color: white;
-}
-
-.tarjeta .atras h3{
-  font-size: 30px;
-  margin-top: 20px;
-  letter-spacing: 2px;
-}
-
-.tarjeta .atras p{
-  letter-spacing: 1px;
-}
-
-.tarjeta:hover .froont{
-  transform: perspective(600px)rotateY(180deg);
-}
-
-.tarjeta:hover .atras{
-  transform: perspective(600px)rotateY(360deg);
-}
-
-.name {
-    background: linear-gradient(45deg, rgb(0, 0, 0) 0%, rgb(78, 140, 213) 100%);
-    left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    min-height: 10vh;
+    background: black;
+     }
+  
+  img {
+    max-width: 100%; }
+  
+  *, *:after, *:before {
+    box-sizing: border-box; }
+  
+  .tarjeta{
+      position: relative;
+      width: 300px;
+      height: 350px;
+      margin: 20px;
+    }
+  
+  .tarjeta .face{
     position: absolute;
-    right: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+  }
+  
+  .tarjeta .froont{
+    transform: perspective(600px)rotateY(0deg);
+    box-shadow: 0 5px 10px #0000;
+  }
+  
+  .tarjeta .froont img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .tarjeta .froont h2{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height:45px;
+    color: white;
+    background: rgba(0, 0, 0,.4);
+    text-align: center;
+  }
+  
+  .tarjeta .atras{
+    transform: perspective(600px)rotateY(180deg);
+    background: rgba(3, 35, 54);
+    padding: 15px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0,5px, 10px #0000;
+  }
+  
+  .tarjeta .atras .enlace{
+    border-radius: solid 1px #f3f3f3;
+    height: 50px;
+    line-height: 50px;
+  }
+  
+  .tarjeta .atras .enlace a{
+    color: white;
+  }
+  
+  .tarjeta .atras h3{
+    font-size: 30px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+  }
+  
+  .tarjeta .atras p{
+    letter-spacing: 1px;
+  }
+  
+  .tarjeta:hover .froont{
+    transform: perspective(600px)rotateY(180deg);
+  }
+  
+  .tarjeta:hover .atras{
+    transform: perspective(600px)rotateY(360deg);
+  }
+  
+  .name {
+      background: linear-gradient(45deg, rgb(0, 0, 0) 0%, rgb(78, 140, 213) 100%);
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding-left: 50px;
+  }
+  
+  img{
+    height: 200px;
+  }
+  
+  /*****************************************************************************/
+  
+  .container{
+    position: absolute;
     top: 0;
-    padding-left: 50px;
-}
-
-img{
-  height: 200px;
-}
-
-/*****************************************************************************/
-
-.container{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  z-index: -1;
-  margin: 0px;
-  font-size: 0px;
-  padding: 0px;
-}
-
-.col{
-  display:inline-block;
-  width: 19%;
-}
-
-.heart{
-  /*content*/
-  width: 150px;
-  height: 150px;
-  position: relative;
-  top: 120vh;
-  z-index:-1;
-}
-
-.circle{
-  /*circle2*/
-  width:90px;
-  height:90px;
-  content:'';
-  background-color: crimson;
-  position: absolute;
-  margin: 35px 0px 0px 30px;
-  transform: rotate(-135deg);
-}
-
-.circle::after{
-  /*square*/
-  width: 90px;
-  height: 90px;
-  content:'';
-  background-color: crimson;
-  border-radius: 45px;
-  position: absolute;
-  margin: 44px 0px;
-}
-
-.circle::before{
-  /*circle1*/
-  width: 90px;
-  height: 90px;    
-  content:'';
-  background-color: crimson;
-  position: absolute;
-  z-index: 1;
-  margin: 0px 44px;
-  border-radius: 45px;
-}
-/******************************/
-.heart.heart1 .circle{
-  animation: 12s colors infinite;
-  animation-delay: 0s;
-}
-.heart.heart1 .circle::before{
-  animation: 12s colors infinite;
-  animation-delay: 0s;
-}
-.heart.heart1 .circle::after{
-  animation: 12s colors infinite;
-  animation-delay: 0s;
-}
-
-
-.heart.heart2 .circle{
-  animation: 12s colors infinite;
-  animation-delay: 3s;
-}
-.heart.heart2 .circle::before{
-  animation: 12s colors infinite;
-  animation-delay: 3s;
-}
-.heart.heart2 .circle::after{
-  animation: 12s colors infinite;
-  animation-delay: 3s;
-}
-
-.heart.heart3 .circle{
-  animation: 12s colors infinite;
-  animation-delay: 6s;
-}
-.heart.heart3 .circle::before{
-  animation: 12s colors infinite;
-  animation-delay: 6s;
-}
-.heart.heart3 .circle::after{
-  animation: 12s colors infinite;
-  animation-delay: 6s;
-}
-
-.heart.heart4 .circle{
-  animation: 12s colors infinite;
-  animation-delay: 9s;
-}
-.heart.heart4 .circle::before{
-  animation: 12s colors infinite;
-  animation-delay: 9s;
-}
-.heart.heart4 .circle::after{
-  animation: 12s colors infinite;
-  animation-delay: 9s;
-}
-
-.heart.heart5 .circle{
-  animation: 12s colors infinite;
-  animation-delay: 5s;
-}
-.heart.heart5 .circle::before{
-  animation: 12s colors infinite;
-  animation-delay: 5s;
-}
-.heart.heart5 .circle::after{
-  animation: 12s colors infinite;
-  animation-delay: 5s;
-}
-
-
-@keyframes colors{
-  0%{     
-     background-color: #b30000;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+    margin: 0px;
+    font-size: 0px;
+    padding: 0px;
   }
-  25%{
-    background-color: #24248f;
+  
+  .col{
+    display:inline-block;
+    width: 19%;
   }
-  50%{
-    background-color: #ff1a9f;
+  
+  .heart{
+    /*content*/
+    width: 150px;
+    height: 150px;
+    position: relative;
+    top: 120vh;
+    z-index:-1;
   }
-  75%{
-    background-color: #fbd204;
+  
+  .circle{
+    /*circle2*/
+    width:90px;
+    height:90px;
+    content:'';
+    background-color: crimson;
+    position: absolute;
+    margin: 35px 0px 0px 30px;
+    transform: rotate(-135deg);
   }
-  100%{
-    background-color: #b30000;
+  
+  .circle::after{
+    /*square*/
+    width: 90px;
+    height: 90px;
+    content:'';
+    background-color: crimson;
+    border-radius: 45px;
+    position: absolute;
+    margin: 44px 0px;
   }
-}
-/******************************/
-.halfMoon{
-  background: transparent;
-  height: 90px;
-  width: 45px;
-  position: absolute;
-  border-radius: 76px 0px 0px 0px;
-  margin: 82px 81px;
-  transform: rotate(45deg);
-}
-.halfMoon::before{
-  background: black;
-  height: 90px;
-  width: 45px;
-  border-radius: 76px 0px 0px 0px;
-  content: '';
-  position: absolute;
-  margin: 45px -40px;
-  transform: rotate(78.5deg);
-}
-
-.halfMoon::after{
-  background: black;
-  height: 90px;
-  width: 45px;
-  border-radius: 0px 0px 0px 76px;  
-  content: '';
-  margin: 3px 7px;
-  position: absolute;  
-  transform: rotate(369deg);
-}
-
-.heart1{
-  animation: 20s Linear-motion infinite,MoveLeft 23s infinite;
-  animation-delay: 5s;
-}
-
-.heart2{
-  animation: 12s Linear-motion infinite, MoveLeft 15s infinite;
-  animation-delay: 1s;
-}
-
-.heart3{
-  animation: 12s Linear-motion infinite, MoveLeft 15s infinite;
-  animation-delay: 18s;
-}
-
-.heart4{
-  animation: 16s Linear-motion infinite, MoveLeft 19s infinite;
-  animation-delay: 11s;
-}
-
-.heart5{
-  animation: 15s Linear-motion infinite, MoveLeft 18s infinite;
-  animation-delay: 5s;
-}
-
-@keyframes Linear-motion{
-  0%{     
-    top:100vh;
+  
+  .circle::before{
+    /*circle1*/
+    width: 90px;
+    height: 90px;    
+    content:'';
+    background-color: crimson;
+    position: absolute;
+    z-index: 1;
+    margin: 0px 44px;
+    border-radius: 45px;
   }
-  100%{
-    top:-20vh;
+  /******************************/
+  .heart.heart1 .circle{
+    animation: 12s colors infinite;
+    animation-delay: 0s;
   }
-}
-
-@keyframes MoveLeft{
-  0%{
-    margin-left: 0%;
+  .heart.heart1 .circle::before{
+    animation: 12s colors infinite;
+    animation-delay: 0s;
   }
-  50%{
-    margin-left:50%;
+  .heart.heart1 .circle::after{
+    animation: 12s colors infinite;
+    animation-delay: 0s;
   }
-  100%{
-    margin-left: 0%;
+  
+  
+  .heart.heart2 .circle{
+    animation: 12s colors infinite;
+    animation-delay: 3s;
   }
-}
-
-@media screen and (max-width: 480px){
-    #tarjeta{
-        height: auto;
+  .heart.heart2 .circle::before{
+    animation: 12s colors infinite;
+    animation-delay: 3s;
+  }
+  .heart.heart2 .circle::after{
+    animation: 12s colors infinite;
+    animation-delay: 3s;
+  }
+  
+  .heart.heart3 .circle{
+    animation: 12s colors infinite;
+    animation-delay: 6s;
+  }
+  .heart.heart3 .circle::before{
+    animation: 12s colors infinite;
+    animation-delay: 6s;
+  }
+  .heart.heart3 .circle::after{
+    animation: 12s colors infinite;
+    animation-delay: 6s;
+  }
+  
+  .heart.heart4 .circle{
+    animation: 12s colors infinite;
+    animation-delay: 9s;
+  }
+  .heart.heart4 .circle::before{
+    animation: 12s colors infinite;
+    animation-delay: 9s;
+  }
+  .heart.heart4 .circle::after{
+    animation: 12s colors infinite;
+    animation-delay: 9s;
+  }
+  
+  .heart.heart5 .circle{
+    animation: 12s colors infinite;
+    animation-delay: 5s;
+  }
+  .heart.heart5 .circle::before{
+    animation: 12s colors infinite;
+    animation-delay: 5s;
+  }
+  .heart.heart5 .circle::after{
+    animation: 12s colors infinite;
+    animation-delay: 5s;
+  }
+  
+  
+  @keyframes colors{
+    0%{     
+       background-color: #b30000;
     }
-    #img{
-        width: auto;
+    25%{
+      background-color: #24248f;
     }
-    #p{
-        display:none;
+    50%{
+      background-color: #ff1a9f;
+    }
+    75%{
+      background-color: #fbd204;
+    }
+    100%{
+      background-color: #b30000;
+    }
+  }
+  /******************************/
+  .halfMoon{
+    background: transparent;
+    height: 90px;
+    width: 45px;
+    position: absolute;
+    border-radius: 76px 0px 0px 0px;
+    margin: 82px 81px;
+    transform: rotate(45deg);
+  }
+  .halfMoon::before{
+    background: black;
+    height: 90px;
+    width: 45px;
+    border-radius: 76px 0px 0px 0px;
+    content: '';
+    position: absolute;
+    margin: 45px -40px;
+    transform: rotate(78.5deg);
+  }
+  
+  .halfMoon::after{
+    background: black;
+    height: 90px;
+    width: 45px;
+    border-radius: 0px 0px 0px 76px;  
+    content: '';
+    margin: 3px 7px;
+    position: absolute;  
+    transform: rotate(369deg);
+  }
+  
+  .heart1{
+    animation: 20s Linear-motion infinite,MoveLeft 23s infinite;
+    animation-delay: 5s;
+  }
+  
+  .heart2{
+    animation: 12s Linear-motion infinite, MoveLeft 15s infinite;
+    animation-delay: 1s;
+  }
+  
+  .heart3{
+    animation: 12s Linear-motion infinite, MoveLeft 15s infinite;
+    animation-delay: 18s;
+  }
+  
+  .heart4{
+    animation: 16s Linear-motion infinite, MoveLeft 19s infinite;
+    animation-delay: 11s;
+  }
+  
+  .heart5{
+    animation: 15s Linear-motion infinite, MoveLeft 18s infinite;
+    animation-delay: 5s;
+  }
+  
+  @keyframes Linear-motion{
+    0%{     
+      top:100vh;
+    }
+    100%{
+      top:-20vh;
+    }
+  }
+  
+  @keyframes MoveLeft{
+    0%{
+      margin-left: 0%;
+    }
+    50%{
+      margin-left:50%;
+    }
+    100%{
+      margin-left: 0%;
+    }
+  }
+  
+  @media screen and (max-width: 480px){
+      #tarjeta{
+          height: auto;
+      }
+      #img{
+          width: auto;
+      }
+      #p{
+          display:none;
+      }
+
     }
